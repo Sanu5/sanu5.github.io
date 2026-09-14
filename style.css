@@ -1,0 +1,22 @@
+:root { --ink:#0D253D; --mute:#64748D; --ground:#F6F9FC; --surface:#fff; --line:#E3E8EE; --indigo:#533AFD; --navy:#1C1E54; --gold:#F4CD5A; }
+* { box-sizing:border-box }
+body { margin:0; font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; color:var(--ink); background:var(--ground); line-height:1.55; -webkit-font-smoothing:antialiased }
+a { color:var(--indigo); text-decoration:none } a:hover { text-decoration:underline }
+.wrap { max-width:760px; margin:0 auto; padding:0 24px }
+header { padding:28px 0 } header .wrap { display:flex; align-items:center; gap:14px }
+header img { width:44px; height:44px; border-radius:11px }
+header .name { font-size:20px; font-weight:500; color:var(--ink) }
+header nav { margin-left:auto; display:flex; gap:20px; font-size:14px; color:var(--mute) } header nav a { color:var(--mute) }
+.hero { padding:56px 0 40px } .hero h1 { font-size:44px; font-weight:300; letter-spacing:-0.02em; line-height:1.1; margin:0 0 16px }
+.hero p { font-size:19px; color:var(--mute); margin:0 0 28px; max-width:560px }
+.hero .icon { width:120px; height:120px; border-radius:28px; box-shadow:0 16px 40px rgba(28,30,84,.25); margin-bottom:28px }
+.pill { display:inline-block; background:var(--navy); color:#fff; padding:12px 22px; border-radius:999px; font-weight:500; font-size:15px }
+.pill.soft { background:#fff; color:var(--ink); border:1px solid var(--line) }
+.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; padding:8px 0 56px }
+.card { background:var(--surface); border:1px solid var(--line); border-radius:16px; padding:22px }
+.card h3 { margin:0 0 6px; font-size:16px; font-weight:500 } .card p { margin:0; color:var(--mute); font-size:15px }
+article { background:var(--surface); border:1px solid var(--line); border-radius:20px; padding:40px 36px; margin:24px 0 56px }
+article h1 { font-size:32px; font-weight:400; letter-spacing:-0.01em; margin:0 0 4px } article .date { color:var(--mute); font-size:14px; margin-bottom:28px }
+article h2 { font-size:18px; font-weight:500; margin:28px 0 8px } article p, article li { font-size:16px } article ul, article ol { padding-left:22px }
+footer { padding:0 0 48px; color:var(--mute); font-size:13px } footer .wrap { display:flex; gap:18px; flex-wrap:wrap }
+@media (max-width:600px){ .hero h1{font-size:34px} article{padding:28px 20px} }
