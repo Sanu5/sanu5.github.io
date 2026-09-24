@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="/style.css"><title>Demo — Mehfil</title><meta name="description" content="A walkthrough of Mehfil on iPhone, how to run both apps yourself in ten minutes with no accounts or keys, and what the sale includes."></head>
+<body>
+<header><div class="wrap"><a href="/"><img src="/icon.png" alt=""></a><span class="name">Mehfil</span><nav><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="mailto:biswalworkanish@gmail.com">Contact</a></nav></div></header>
+<main class="wrap demo">
+
+<section class="hero">
+<h1>See Mehfil working</h1>
+<p>A three-minute walkthrough of the iPhone app, recorded on a simulator with the built-in sample season: twelve events, a crew of 28, inventory and ₹23.5 lakh in receivables. It follows one real problem, two Saturday events that both need the same decor team, from the warning on the home screen to the one-tap fix. Mehfil is a complete operations app for Indian wedding vendors, native on iOS and Android over a shared Firebase backend. Everything in the film is running code from the sale; nothing is a mock-up.</p>
+</section>
+
+<div class="video">
+<video controls playsinline preload="metadata" poster="poster.jpg">
+<source src="mehfil-demo.mp4" type="video/mp4">
+<a href="mehfil-demo.mp4">Download the walkthrough (MP4, 38 MB)</a>
+</video>
+</div>
+<p class="status"><strong>Status:</strong> complete and working on both platforms. Never submitted to the App Store or Google Play; no users, no revenue.</p>
+
+<article>
+<h2>Run it yourself</h2>
+<p>Neither app needs an account, a key or a backend to run. Without a Firebase config file, each starts in <em>device-only mode</em>: the welcome screen offers <strong>Continue on this device</strong> and keeps everything on the device, so the whole product works from a fresh checkout in about ten minutes.</p>
+<p>The repositories are private. <a href="mailto:biswalworkanish@gmail.com?subject=Mehfil%20repository%20access">Email for read access</a> to <code>mehfil-ios</code>, <code>mehfil-android</code>, <code>mehfil-backend</code> and <code>mehfil-design</code>.</p>
+
+<h3>iPhone</h3>
+<p class="req">Needs a Mac with Xcode 26 (iOS 26 SDK).</p>
+<ol class="steps">
+<li>Clone <code>mehfil-ios</code> and open <code>Mehfil.xcodeproj</code>.</li>
+<li>To start with the sample data shown in the film, set <code>case .sampleSeason: true</code> in <code>Mehfil/Model/FeatureConfig.swift</code>. It ships off so a production build never contains demo data.</li>
+<li>Choose the <strong>Mehfil</strong> scheme and an iPhone simulator, then press Run. The first build downloads the Firebase and Google Sign-In packages, which takes a few minutes. If Xcode asks for a signing team, pick your own Apple ID; a free account is fine.</li>
+<li>Tap <strong>Continue on this device</strong>, enter any name and business, leave <strong>Start with a sample season</strong> on, and open Mehfil.</li>
+</ol>
+
+<h3>Android</h3>
+<p class="req">Needs Android Studio 2025.3 or later (Gradle 9.4, AGP 9.2, min SDK 26).</p>
+<ol class="steps">
+<li>Clone <code>mehfil-android</code> and open the folder in Android Studio.</li>
+<li>For the sample data, set <code>SAMPLE_SEASON(true)</code> in <code>app/src/main/java/com/mehfil/app/model/FeatureConfig.kt</code>.</li>
+<li>Run on an emulator or a phone with Android 8.0 or later.</li>
+<li>Onboarding is the same as on iPhone.</li>
+</ol>
+<p>To switch on real accounts, drop in a <code>GoogleService-Info.plist</code> or <code>google-services.json</code>; the setup is in <code>mehfil-backend</code>.</p>
+</article>
+
+<section class="card apk">
+<h3>Try the Android app without the code</h3>
+<p>A release build in device-only mode with the sample season on. It keeps everything on the phone and sends nothing to any server.</p>
+<a class="pill" href="mehfil-demo.apk" download>Download the APK</a>
+<p class="note">4.6 MB · Android 8.0 or later. It is signed with a standard debug key rather than a store key, so Android will warn that it comes from an unknown source. Allow installs from your browser or file manager when prompted, and uninstall it when you're done.</p>
+</section>
+
+<article>
+<h2>What's included in the sale</h2>
+<ul>
+<li><strong>iPhone app</strong> — SwiftUI for iOS 26, about 6,700 lines, with unit tests.</li>
+<li><strong>Android app</strong> — Kotlin and Jetpack Compose, about 5,800 lines, with unit tests.</li>
+<li><strong>Backend</strong> — Firebase Auth and Firestore: security rules, indexes and the data model.</li>
+<li><strong>This website</strong> — homepage, privacy policy, terms and account deletion, on GitHub Pages.</li>
+<li><strong>Design system</strong> — the token set, 92 designed screens in light and dark, the app icon and store graphics.</li>
+<li><strong>Documentation</strong> — every design decision, a handover and transfer checklist, a Play Store guide and store copy.</li>
+</ul>
+</article>
+
+</main>
+<footer><div class="wrap"><span>© 2026 Mehfil</span><a href="/privacy/">Privacy Policy</a><a href="/terms/">Terms of Use</a><a href="/delete-account/">Delete your account</a><a href="mailto:biswalworkanish@gmail.com">biswalworkanish@gmail.com</a></div></footer>
+</body>
+</html>

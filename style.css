@@ -21,3 +21,16 @@ article h1 { font-size:32px; font-weight:700; letter-spacing:-0.01em; margin:0 0
 article h2 { font-size:18px; font-weight:500; margin:28px 0 8px } article p, article li { font-size:16px } article ul, article ol { padding-left:22px }
 footer { padding:0 0 48px; color:var(--mute); font-size:13px } footer .wrap { display:flex; gap:18px; flex-wrap:wrap }
 @media (max-width:600px){ .hero h1{font-size:34px} article{padding:28px 20px} }
+/* Demo page (/demo/). Everything is scoped to .demo so no existing page changes. */
+.demo .hero { padding:40px 0 28px } .demo .hero p { max-width:none; font-size:17px }
+.demo .video { aspect-ratio:16/9; border-radius:14px; overflow:hidden; border:1px solid var(--line); background:var(--surface) }
+.demo .video video { display:block; width:100%; height:100%; object-fit:cover }
+.demo .status { font-size:15px; color:var(--mute); margin:16px 0 0 } .demo .status strong { color:var(--ink); font-weight:500 }
+.demo article h3, .demo .card h3 { font-size:16px; font-weight:500; margin:24px 0 4px } .demo .card h3 { margin-top:0 }
+.demo article > h2:first-child { margin-top:0 }
+.demo .req { color:var(--mute); font-size:15px; margin:0 0 8px }
+.demo .steps li { margin:0 0 8px }
+.demo code { font-size:.88em; background:var(--ground); border:1px solid var(--line); border-radius:4px; padding:1px 5px; overflow-wrap:anywhere }
+.demo .apk { margin:0 0 8px } .demo .apk .pill { margin:14px 0 12px }
+.demo .apk .note { font-size:14px }
+@media (max-width:600px){ .demo .hero { padding:16px 0 18px } .demo .hero h1 { font-size:30px; margin-bottom:12px } .demo .hero p { font-size:16px; line-height:1.5 } .demo .video { border-radius:10px } }
