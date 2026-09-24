@@ -34,3 +34,29 @@ footer { padding:0 0 48px; color:var(--mute); font-size:13px } footer .wrap { di
 .demo .apk { margin:0 0 8px } .demo .apk .pill { margin:14px 0 12px }
 .demo .apk .note { font-size:14px }
 @media (max-width:600px){ .demo .hero { padding:16px 0 18px } .demo .hero h1 { font-size:30px; margin-bottom:12px } .demo .hero p { font-size:16px; line-height:1.5 } .demo .video { border-radius:10px } }
+
+/* UI kit page (/ui-kit/). Scoped to .kit so nothing else changes. */
+.kit .wrap { max-width:960px }
+.kit .hero { padding:44px 0 28px }
+.kit .hero h1 { font-size:40px; margin-bottom:12px }
+.kit .hero p { font-size:18px; max-width:640px }
+.kit .price { display:flex; align-items:baseline; gap:12px; margin:0 0 22px }
+.kit .price b { font-size:34px; font-weight:700; letter-spacing:-0.02em }
+.kit .price span { color:var(--mute); font-size:15px }
+.kit .buy { display:flex; gap:12px; flex-wrap:wrap; align-items:center; margin:0 0 8px }
+.kit .cover { width:100%; border-radius:14px; border:1px solid var(--line); display:block; margin:8px 0 40px }
+.kit .shots { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin:0 0 48px }
+.kit .shots img { width:100%; border-radius:12px; border:1px solid var(--line); display:block }
+.kit .shots figure { margin:0 }
+.kit .shots figcaption { color:var(--mute); font-size:14px; margin-top:8px }
+.kit h2 { font-size:22px; font-weight:500; margin:0 0 14px }
+.kit section { margin:0 0 48px }
+.kit .specs { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:16px }
+.kit .specs div { background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:20px }
+.kit .specs b { display:block; font-size:22px; font-weight:700; letter-spacing:-0.01em }
+.kit .specs span { color:var(--mute); font-size:14px }
+.kit ul.plain { list-style:none; padding:0; margin:0 }
+.kit ul.plain li { padding:12px 0; border-bottom:1px solid var(--line); font-size:16px }
+.kit ul.plain li:last-child { border-bottom:0 }
+.kit .fine { color:var(--mute); font-size:14px }
+@media (max-width:700px){ .kit .shots { grid-template-columns:1fr } .kit .hero h1 { font-size:32px } }
